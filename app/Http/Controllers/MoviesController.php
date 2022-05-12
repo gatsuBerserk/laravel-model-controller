@@ -9,11 +9,12 @@ class MoviesController extends Controller
 {
     
     public function index(){
+        // query
         $movies = Movie::all();
         $data = [
-             
-            "movies" => $movies,
+            "movie" => new Movie(), 
+            "movies" => $movies
         ];
         return view ("movies.index", $data);
-    }
+    } 
 }
